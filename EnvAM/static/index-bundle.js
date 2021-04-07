@@ -16,7 +16,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_tooltip__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-tooltip */ \"./node_modules/react-tooltip/dist/index.es.js\");\n/* harmony import */ var _MapChart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MapChart */ \"./assets/MapChart.js\");\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _iterableToArrayLimit(arr, i) { if (typeof Symbol === \"undefined\" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n\n\n\n\n\nfunction App() {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(\"\"),\n      _useState2 = _slicedToArray(_useState, 2),\n      content = _useState2[0],\n      setContent = _useState2[1];\n\n  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(\"Click a country\"),\n      _useState4 = _slicedToArray(_useState3, 2),\n      selected = _useState4[0],\n      setSelected = _useState4[1];\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"base\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h1\", null, \"Framework\"), selected !== \"Click a country\" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"button\", {\n    onClick: function onClick() {\n      return setSelected(\"Click a country\");\n    }\n  }, \"Clear selection\") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h4\", null, selected)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"map\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_MapChart__WEBPACK_IMPORTED_MODULE_3__.default, {\n    selected: selected,\n    setSelected: setSelected,\n    setTooltipContent: setContent\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_tooltip__WEBPACK_IMPORTED_MODULE_2__.default, null, content)));\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n//# sourceURL=webpack://EnvAM/./assets/App.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_tooltip__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-tooltip */ \"./node_modules/react-tooltip/dist/index.es.js\");\n/* harmony import */ var _MapChart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MapChart */ \"./assets/MapChart.js\");\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _iterableToArrayLimit(arr, i) { if (typeof Symbol === \"undefined\" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n\n\n\n\n\nfunction App() {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(\"\"),\n      _useState2 = _slicedToArray(_useState, 2),\n      content = _useState2[0],\n      setContent = _useState2[1];\n\n  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(\"CO2 emissions (metric tons per capita)\"),\n      _useState4 = _slicedToArray(_useState3, 2),\n      series = _useState4[0],\n      setSeries = _useState4[1];\n\n  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(\"2011\"),\n      _useState6 = _slicedToArray(_useState5, 2),\n      year = _useState6[0],\n      setYear = _useState6[1];\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"base\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"container\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h2\", null, \"Environmental Awareness Model\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"form\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"label\", null, \"Select data:\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"select\", {\n    value: series,\n    onChange: function onChange(e) {\n      return setSeries(e.target.value);\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"option\", null, \"CO2 emissions (metric tons per capita)\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"option\", null, \"CO2 emissions (kt)\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"option\", null, \"Total greenhouse gas emissions (kt of CO2 equivalent)\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"option\", null, \"Terrestrial and marine protected areas (% of total territorial area)\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"option\", null, \"Access to electricity (% of population)\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"option\", null, \"Energy use (kg of oil equivalent per capita)\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"option\", null, \"GDP per unit of energy use (PPP $ per kg of oil equivalent)\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"option\", null, \"Total natural resources rents (% of GDP)\"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"form\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"label\", null, \"Select year:\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", {\n    type: \"number\",\n    value: year,\n    onChange: function onChange(e) {\n      return setYear(e.target.value);\n    }\n  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"map\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_MapChart__WEBPACK_IMPORTED_MODULE_3__.default, {\n    series: series,\n    year: year,\n    setTooltipContent: setContent\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_tooltip__WEBPACK_IMPORTED_MODULE_2__.default, null, content)));\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n//# sourceURL=webpack://EnvAM/./assets/App.js?");
 
 /***/ }),
 
@@ -27,7 +27,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_simple_maps__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-simple-maps */ \"./node_modules/react-simple-maps/dist/index.umd.js\");\n/* harmony import */ var react_simple_maps__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_simple_maps__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar geoUrl = \"https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json\";\n\nvar MapChart = function MapChart(_ref) {\n  var setTooltipContent = _ref.setTooltipContent,\n      selected = _ref.selected,\n      setSelected = _ref.setSelected;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_simple_maps__WEBPACK_IMPORTED_MODULE_1__.ComposableMap, {\n    \"data-tip\": \"\",\n    projectionConfig: {\n      rotate: [-15, 0, 0],\n      scale: 180\n    },\n    style: {\n      maxHeight: \"450\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_simple_maps__WEBPACK_IMPORTED_MODULE_1__.ZoomableGroup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_simple_maps__WEBPACK_IMPORTED_MODULE_1__.Geographies, {\n    geography: geoUrl\n  }, function (_ref2) {\n    var geographies = _ref2.geographies;\n    return geographies.map(function (geo) {\n      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_simple_maps__WEBPACK_IMPORTED_MODULE_1__.Geography, {\n        key: geo.rsmKey,\n        geography: geo,\n        onMouseEnter: function onMouseEnter() {\n          var _geo$properties = geo.properties,\n              NAME = _geo$properties.NAME,\n              POP_EST = _geo$properties.POP_EST;\n          setTooltipContent(\"\".concat(NAME));\n        },\n        onMouseLeave: function onMouseLeave() {\n          setTooltipContent(\"\");\n        },\n        onClick: function onClick() {\n          setSelected(geo.properties.NAME);\n        },\n        stroke: \"#aaa\",\n        strokeWidth: \"0.5\",\n        fill: geo.properties.NAME === selected ? \"#e42\" : \"#D6D6DA\",\n        style: {\n          \"default\": {\n            outline: 'none'\n          },\n          hover: {\n            fill: \"#F53\",\n            outline: 'none'\n          },\n          pressed: {\n            fill: \"#E42\",\n            outline: 'none'\n          }\n        }\n      });\n    });\n  }))));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.memo)(MapChart));\n\n//# sourceURL=webpack://EnvAM/./assets/MapChart.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_simple_maps__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-simple-maps */ \"./node_modules/react-simple-maps/dist/index.umd.js\");\n/* harmony import */ var react_simple_maps__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_simple_maps__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var d3_scale__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! d3-scale */ \"./node_modules/d3-scale/src/quantile.js\");\n/* harmony import */ var d3_fetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! d3-fetch */ \"./node_modules/d3-fetch/src/dsv.js\");\n/* harmony import */ var _dataset_csv__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dataset.csv */ \"./assets/dataset.csv\");\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _iterableToArrayLimit(arr, i) { if (typeof Symbol === \"undefined\" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n\n\n\n\n\n\nvar geoUrl = \"https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json\";\n\nvar MapChart = function MapChart(_ref) {\n  var setTooltipContent = _ref.setTooltipContent,\n      series = _ref.series,\n      year = _ref.year;\n\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),\n      _useState2 = _slicedToArray(_useState, 2),\n      data = _useState2[0],\n      setData = _useState2[1];\n\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {\n    // https://www.bls.gov/lau/\n    (0,d3_fetch__WEBPACK_IMPORTED_MODULE_3__.csv)(_dataset_csv__WEBPACK_IMPORTED_MODULE_2__.default).then(function (dataset) {\n      setData(dataset);\n    });\n  }, []);\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_simple_maps__WEBPACK_IMPORTED_MODULE_1__.ComposableMap, {\n    \"data-tip\": \"\",\n    projectionConfig: {\n      rotate: [-40, 0, 0],\n      scale: 180\n    },\n    style: {\n      maxHeight: \"600\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_simple_maps__WEBPACK_IMPORTED_MODULE_1__.ZoomableGroup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_simple_maps__WEBPACK_IMPORTED_MODULE_1__.Geographies, {\n    geography: geoUrl\n  }, function (_ref2) {\n    var geographies = _ref2.geographies;\n    return geographies.map(function (geo) {\n      var cur = data.find(function (s) {\n        return s.Country_Name === geo.properties.NAME && s.Series_Name === series;\n      });\n      var colorScale = (0,d3_scale__WEBPACK_IMPORTED_MODULE_4__.default)().domain(data.filter(function (d) {\n        return d.Series_Name === series;\n      }).map(function (d) {\n        return d[year];\n      })).range([\"#ffedea\", \"#ffcec5\", \"#ffad9f\", \"#ff8a75\", \"#ff5533\", \"#e2492d\", \"#be3d26\", \"#9a311f\", \"#782618\"]);\n      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_simple_maps__WEBPACK_IMPORTED_MODULE_1__.Geography, {\n        key: geo.rsmKey,\n        geography: geo,\n        onMouseEnter: function onMouseEnter() {\n          if (cur) {\n            setTooltipContent(geo.properties.NAME + \": \" + cur[year]);\n\n            if (!cur[year]) {\n              setTooltipContent(geo.properties.NAME + \": No data\");\n            }\n          } else {\n            setTooltipContent(geo.properties.NAME + \": No data\");\n          }\n        },\n        onMouseLeave: function onMouseLeave() {\n          setTooltipContent(\"\");\n        },\n        stroke: \"#aaa\",\n        strokeWidth: \"0.5\",\n        fill: cur && cur[year] ? colorScale(cur[year]) : \"#EEE\",\n        style: {\n          \"default\": {\n            outline: 'none'\n          },\n          hover: {\n            fill: \"#0079d3\",\n            outline: 'none'\n          },\n          pressed: {\n            fill: \"#E42\",\n            outline: 'none'\n          }\n        }\n      });\n    });\n  }))));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MapChart);\n\n//# sourceURL=webpack://EnvAM/./assets/MapChart.js?");
 
 /***/ }),
 
@@ -42,6 +42,39 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
+/***/ "./node_modules/d3-array/src/ascending.js":
+/*!************************************************!*\
+  !*** ./node_modules/d3-array/src/ascending.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(a, b) {\n  return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;\n}\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-array/src/ascending.js?");
+
+/***/ }),
+
+/***/ "./node_modules/d3-array/src/bisect.js":
+/*!*********************************************!*\
+  !*** ./node_modules/d3-array/src/bisect.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"bisectRight\": () => (/* binding */ bisectRight),\n/* harmony export */   \"bisectLeft\": () => (/* binding */ bisectLeft),\n/* harmony export */   \"bisectCenter\": () => (/* binding */ bisectCenter),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _ascending_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ascending.js */ \"./node_modules/d3-array/src/ascending.js\");\n/* harmony import */ var _bisector_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bisector.js */ \"./node_modules/d3-array/src/bisector.js\");\n/* harmony import */ var _number_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./number.js */ \"./node_modules/d3-array/src/number.js\");\n\n\n\n\nconst ascendingBisect = (0,_bisector_js__WEBPACK_IMPORTED_MODULE_0__.default)(_ascending_js__WEBPACK_IMPORTED_MODULE_1__.default);\nconst bisectRight = ascendingBisect.right;\nconst bisectLeft = ascendingBisect.left;\nconst bisectCenter = (0,_bisector_js__WEBPACK_IMPORTED_MODULE_0__.default)(_number_js__WEBPACK_IMPORTED_MODULE_2__.default).center;\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (bisectRight);\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-array/src/bisect.js?");
+
+/***/ }),
+
+/***/ "./node_modules/d3-array/src/bisector.js":
+/*!***********************************************!*\
+  !*** ./node_modules/d3-array/src/bisector.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _ascending_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ascending.js */ \"./node_modules/d3-array/src/ascending.js\");\n\n\n/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(f) {\n  let delta = f;\n  let compare = f;\n\n  if (f.length === 1) {\n    delta = (d, x) => f(d) - x;\n    compare = ascendingComparator(f);\n  }\n\n  function left(a, x, lo, hi) {\n    if (lo == null) lo = 0;\n    if (hi == null) hi = a.length;\n    while (lo < hi) {\n      const mid = (lo + hi) >>> 1;\n      if (compare(a[mid], x) < 0) lo = mid + 1;\n      else hi = mid;\n    }\n    return lo;\n  }\n\n  function right(a, x, lo, hi) {\n    if (lo == null) lo = 0;\n    if (hi == null) hi = a.length;\n    while (lo < hi) {\n      const mid = (lo + hi) >>> 1;\n      if (compare(a[mid], x) > 0) hi = mid;\n      else lo = mid + 1;\n    }\n    return lo;\n  }\n\n  function center(a, x, lo, hi) {\n    if (lo == null) lo = 0;\n    if (hi == null) hi = a.length;\n    const i = left(a, x, lo, hi - 1);\n    return i > lo && delta(a[i - 1], x) > -delta(a[i], x) ? i - 1 : i;\n  }\n\n  return {left, center, right};\n}\n\nfunction ascendingComparator(f) {\n  return (d, x) => (0,_ascending_js__WEBPACK_IMPORTED_MODULE_0__.default)(f(d), x);\n}\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-array/src/bisector.js?");
+
+/***/ }),
+
 /***/ "./node_modules/d3-array/src/fsum.js":
 /*!*******************************************!*\
   !*** ./node_modules/d3-array/src/fsum.js ***!
@@ -53,6 +86,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./node_modules/d3-array/src/max.js":
+/*!******************************************!*\
+  !*** ./node_modules/d3-array/src/max.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ max)\n/* harmony export */ });\nfunction max(values, valueof) {\n  let max;\n  if (valueof === undefined) {\n    for (const value of values) {\n      if (value != null\n          && (max < value || (max === undefined && value >= value))) {\n        max = value;\n      }\n    }\n  } else {\n    let index = -1;\n    for (let value of values) {\n      if ((value = valueof(value, ++index, values)) != null\n          && (max < value || (max === undefined && value >= value))) {\n        max = value;\n      }\n    }\n  }\n  return max;\n}\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-array/src/max.js?");
+
+/***/ }),
+
 /***/ "./node_modules/d3-array/src/merge.js":
 /*!********************************************!*\
   !*** ./node_modules/d3-array/src/merge.js ***!
@@ -61,6 +105,50 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ merge)\n/* harmony export */ });\nfunction* flatten(arrays) {\n  for (const array of arrays) {\n    yield* array;\n  }\n}\n\nfunction merge(arrays) {\n  return Array.from(flatten(arrays));\n}\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-array/src/merge.js?");
+
+/***/ }),
+
+/***/ "./node_modules/d3-array/src/min.js":
+/*!******************************************!*\
+  !*** ./node_modules/d3-array/src/min.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ min)\n/* harmony export */ });\nfunction min(values, valueof) {\n  let min;\n  if (valueof === undefined) {\n    for (const value of values) {\n      if (value != null\n          && (min > value || (min === undefined && value >= value))) {\n        min = value;\n      }\n    }\n  } else {\n    let index = -1;\n    for (let value of values) {\n      if ((value = valueof(value, ++index, values)) != null\n          && (min > value || (min === undefined && value >= value))) {\n        min = value;\n      }\n    }\n  }\n  return min;\n}\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-array/src/min.js?");
+
+/***/ }),
+
+/***/ "./node_modules/d3-array/src/number.js":
+/*!*********************************************!*\
+  !*** ./node_modules/d3-array/src/number.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"numbers\": () => (/* binding */ numbers)\n/* harmony export */ });\n/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(x) {\n  return x === null ? NaN : +x;\n}\n\nfunction* numbers(values, valueof) {\n  if (valueof === undefined) {\n    for (let value of values) {\n      if (value != null && (value = +value) >= value) {\n        yield value;\n      }\n    }\n  } else {\n    let index = -1;\n    for (let value of values) {\n      if ((value = valueof(value, ++index, values)) != null && (value = +value) >= value) {\n        yield value;\n      }\n    }\n  }\n}\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-array/src/number.js?");
+
+/***/ }),
+
+/***/ "./node_modules/d3-array/src/quantile.js":
+/*!***********************************************!*\
+  !*** ./node_modules/d3-array/src/quantile.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ quantile),\n/* harmony export */   \"quantileSorted\": () => (/* binding */ quantileSorted)\n/* harmony export */ });\n/* harmony import */ var _max_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./max.js */ \"./node_modules/d3-array/src/max.js\");\n/* harmony import */ var _min_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./min.js */ \"./node_modules/d3-array/src/min.js\");\n/* harmony import */ var _quickselect_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./quickselect.js */ \"./node_modules/d3-array/src/quickselect.js\");\n/* harmony import */ var _number_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./number.js */ \"./node_modules/d3-array/src/number.js\");\n\n\n\n\n\nfunction quantile(values, p, valueof) {\n  values = Float64Array.from((0,_number_js__WEBPACK_IMPORTED_MODULE_0__.numbers)(values, valueof));\n  if (!(n = values.length)) return;\n  if ((p = +p) <= 0 || n < 2) return (0,_min_js__WEBPACK_IMPORTED_MODULE_1__.default)(values);\n  if (p >= 1) return (0,_max_js__WEBPACK_IMPORTED_MODULE_2__.default)(values);\n  var n,\n      i = (n - 1) * p,\n      i0 = Math.floor(i),\n      value0 = (0,_max_js__WEBPACK_IMPORTED_MODULE_2__.default)((0,_quickselect_js__WEBPACK_IMPORTED_MODULE_3__.default)(values, i0).subarray(0, i0 + 1)),\n      value1 = (0,_min_js__WEBPACK_IMPORTED_MODULE_1__.default)(values.subarray(i0 + 1));\n  return value0 + (value1 - value0) * (i - i0);\n}\n\nfunction quantileSorted(values, p, valueof = _number_js__WEBPACK_IMPORTED_MODULE_0__.default) {\n  if (!(n = values.length)) return;\n  if ((p = +p) <= 0 || n < 2) return +valueof(values[0], 0, values);\n  if (p >= 1) return +valueof(values[n - 1], n - 1, values);\n  var n,\n      i = (n - 1) * p,\n      i0 = Math.floor(i),\n      value0 = +valueof(values[i0], i0, values),\n      value1 = +valueof(values[i0 + 1], i0 + 1, values);\n  return value0 + (value1 - value0) * (i - i0);\n}\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-array/src/quantile.js?");
+
+/***/ }),
+
+/***/ "./node_modules/d3-array/src/quickselect.js":
+/*!**************************************************!*\
+  !*** ./node_modules/d3-array/src/quickselect.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ quickselect)\n/* harmony export */ });\n/* harmony import */ var _ascending_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ascending.js */ \"./node_modules/d3-array/src/ascending.js\");\n\n\n// Based on https://github.com/mourner/quickselect\n// ISC license, Copyright 2018 Vladimir Agafonkin.\nfunction quickselect(array, k, left = 0, right = array.length - 1, compare = _ascending_js__WEBPACK_IMPORTED_MODULE_0__.default) {\n  while (right > left) {\n    if (right - left > 600) {\n      const n = right - left + 1;\n      const m = k - left + 1;\n      const z = Math.log(n);\n      const s = 0.5 * Math.exp(2 * z / 3);\n      const sd = 0.5 * Math.sqrt(z * s * (n - s) / n) * (m - n / 2 < 0 ? -1 : 1);\n      const newLeft = Math.max(left, Math.floor(k - m * s / n + sd));\n      const newRight = Math.min(right, Math.floor(k + (n - m) * s / n + sd));\n      quickselect(array, k, newLeft, newRight, compare);\n    }\n\n    const t = array[k];\n    let i = left;\n    let j = right;\n\n    swap(array, left, k);\n    if (compare(array[right], t) > 0) swap(array, left, right);\n\n    while (i < j) {\n      swap(array, i, j), ++i, --j;\n      while (compare(array[i], t) < 0) ++i;\n      while (compare(array[j], t) > 0) --j;\n    }\n\n    if (compare(array[left], t) === 0) swap(array, left, j);\n    else ++j, swap(array, j, right);\n\n    if (j <= k) left = j + 1;\n    if (k <= j) right = j - 1;\n  }\n  return array;\n}\n\nfunction swap(array, i, j) {\n  const t = array[i];\n  array[i] = array[j];\n  array[j] = t;\n}\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-array/src/quickselect.js?");
 
 /***/ }),
 
@@ -130,6 +218,39 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./node_modules/d3-dsv/src/csv.js":
+/*!****************************************!*\
+  !*** ./node_modules/d3-dsv/src/csv.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"csvParse\": () => (/* binding */ csvParse),\n/* harmony export */   \"csvParseRows\": () => (/* binding */ csvParseRows),\n/* harmony export */   \"csvFormat\": () => (/* binding */ csvFormat),\n/* harmony export */   \"csvFormatBody\": () => (/* binding */ csvFormatBody),\n/* harmony export */   \"csvFormatRows\": () => (/* binding */ csvFormatRows),\n/* harmony export */   \"csvFormatRow\": () => (/* binding */ csvFormatRow),\n/* harmony export */   \"csvFormatValue\": () => (/* binding */ csvFormatValue)\n/* harmony export */ });\n/* harmony import */ var _dsv_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dsv.js */ \"./node_modules/d3-dsv/src/dsv.js\");\n\n\nvar csv = (0,_dsv_js__WEBPACK_IMPORTED_MODULE_0__.default)(\",\");\n\nvar csvParse = csv.parse;\nvar csvParseRows = csv.parseRows;\nvar csvFormat = csv.format;\nvar csvFormatBody = csv.formatBody;\nvar csvFormatRows = csv.formatRows;\nvar csvFormatRow = csv.formatRow;\nvar csvFormatValue = csv.formatValue;\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-dsv/src/csv.js?");
+
+/***/ }),
+
+/***/ "./node_modules/d3-dsv/src/dsv.js":
+/*!****************************************!*\
+  !*** ./node_modules/d3-dsv/src/dsv.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar EOL = {},\n    EOF = {},\n    QUOTE = 34,\n    NEWLINE = 10,\n    RETURN = 13;\n\nfunction objectConverter(columns) {\n  return new Function(\"d\", \"return {\" + columns.map(function(name, i) {\n    return JSON.stringify(name) + \": d[\" + i + \"] || \\\"\\\"\";\n  }).join(\",\") + \"}\");\n}\n\nfunction customConverter(columns, f) {\n  var object = objectConverter(columns);\n  return function(row, i) {\n    return f(object(row), i, columns);\n  };\n}\n\n// Compute unique columns in order of discovery.\nfunction inferColumns(rows) {\n  var columnSet = Object.create(null),\n      columns = [];\n\n  rows.forEach(function(row) {\n    for (var column in row) {\n      if (!(column in columnSet)) {\n        columns.push(columnSet[column] = column);\n      }\n    }\n  });\n\n  return columns;\n}\n\nfunction pad(value, width) {\n  var s = value + \"\", length = s.length;\n  return length < width ? new Array(width - length + 1).join(0) + s : s;\n}\n\nfunction formatYear(year) {\n  return year < 0 ? \"-\" + pad(-year, 6)\n    : year > 9999 ? \"+\" + pad(year, 6)\n    : pad(year, 4);\n}\n\nfunction formatDate(date) {\n  var hours = date.getUTCHours(),\n      minutes = date.getUTCMinutes(),\n      seconds = date.getUTCSeconds(),\n      milliseconds = date.getUTCMilliseconds();\n  return isNaN(date) ? \"Invalid Date\"\n      : formatYear(date.getUTCFullYear(), 4) + \"-\" + pad(date.getUTCMonth() + 1, 2) + \"-\" + pad(date.getUTCDate(), 2)\n      + (milliseconds ? \"T\" + pad(hours, 2) + \":\" + pad(minutes, 2) + \":\" + pad(seconds, 2) + \".\" + pad(milliseconds, 3) + \"Z\"\n      : seconds ? \"T\" + pad(hours, 2) + \":\" + pad(minutes, 2) + \":\" + pad(seconds, 2) + \"Z\"\n      : minutes || hours ? \"T\" + pad(hours, 2) + \":\" + pad(minutes, 2) + \"Z\"\n      : \"\");\n}\n\n/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(delimiter) {\n  var reFormat = new RegExp(\"[\\\"\" + delimiter + \"\\n\\r]\"),\n      DELIMITER = delimiter.charCodeAt(0);\n\n  function parse(text, f) {\n    var convert, columns, rows = parseRows(text, function(row, i) {\n      if (convert) return convert(row, i - 1);\n      columns = row, convert = f ? customConverter(row, f) : objectConverter(row);\n    });\n    rows.columns = columns || [];\n    return rows;\n  }\n\n  function parseRows(text, f) {\n    var rows = [], // output rows\n        N = text.length,\n        I = 0, // current character index\n        n = 0, // current line number\n        t, // current token\n        eof = N <= 0, // current token followed by EOF?\n        eol = false; // current token followed by EOL?\n\n    // Strip the trailing newline.\n    if (text.charCodeAt(N - 1) === NEWLINE) --N;\n    if (text.charCodeAt(N - 1) === RETURN) --N;\n\n    function token() {\n      if (eof) return EOF;\n      if (eol) return eol = false, EOL;\n\n      // Unescape quotes.\n      var i, j = I, c;\n      if (text.charCodeAt(j) === QUOTE) {\n        while (I++ < N && text.charCodeAt(I) !== QUOTE || text.charCodeAt(++I) === QUOTE);\n        if ((i = I) >= N) eof = true;\n        else if ((c = text.charCodeAt(I++)) === NEWLINE) eol = true;\n        else if (c === RETURN) { eol = true; if (text.charCodeAt(I) === NEWLINE) ++I; }\n        return text.slice(j + 1, i - 1).replace(/\"\"/g, \"\\\"\");\n      }\n\n      // Find next delimiter or newline.\n      while (I < N) {\n        if ((c = text.charCodeAt(i = I++)) === NEWLINE) eol = true;\n        else if (c === RETURN) { eol = true; if (text.charCodeAt(I) === NEWLINE) ++I; }\n        else if (c !== DELIMITER) continue;\n        return text.slice(j, i);\n      }\n\n      // Return last token before EOF.\n      return eof = true, text.slice(j, N);\n    }\n\n    while ((t = token()) !== EOF) {\n      var row = [];\n      while (t !== EOL && t !== EOF) row.push(t), t = token();\n      if (f && (row = f(row, n++)) == null) continue;\n      rows.push(row);\n    }\n\n    return rows;\n  }\n\n  function preformatBody(rows, columns) {\n    return rows.map(function(row) {\n      return columns.map(function(column) {\n        return formatValue(row[column]);\n      }).join(delimiter);\n    });\n  }\n\n  function format(rows, columns) {\n    if (columns == null) columns = inferColumns(rows);\n    return [columns.map(formatValue).join(delimiter)].concat(preformatBody(rows, columns)).join(\"\\n\");\n  }\n\n  function formatBody(rows, columns) {\n    if (columns == null) columns = inferColumns(rows);\n    return preformatBody(rows, columns).join(\"\\n\");\n  }\n\n  function formatRows(rows) {\n    return rows.map(formatRow).join(\"\\n\");\n  }\n\n  function formatRow(row) {\n    return row.map(formatValue).join(delimiter);\n  }\n\n  function formatValue(value) {\n    return value == null ? \"\"\n        : value instanceof Date ? formatDate(value)\n        : reFormat.test(value += \"\") ? \"\\\"\" + value.replace(/\"/g, \"\\\"\\\"\") + \"\\\"\"\n        : value;\n  }\n\n  return {\n    parse: parse,\n    parseRows: parseRows,\n    format: format,\n    formatBody: formatBody,\n    formatRows: formatRows,\n    formatRow: formatRow,\n    formatValue: formatValue\n  };\n}\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-dsv/src/dsv.js?");
+
+/***/ }),
+
+/***/ "./node_modules/d3-dsv/src/tsv.js":
+/*!****************************************!*\
+  !*** ./node_modules/d3-dsv/src/tsv.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"tsvParse\": () => (/* binding */ tsvParse),\n/* harmony export */   \"tsvParseRows\": () => (/* binding */ tsvParseRows),\n/* harmony export */   \"tsvFormat\": () => (/* binding */ tsvFormat),\n/* harmony export */   \"tsvFormatBody\": () => (/* binding */ tsvFormatBody),\n/* harmony export */   \"tsvFormatRows\": () => (/* binding */ tsvFormatRows),\n/* harmony export */   \"tsvFormatRow\": () => (/* binding */ tsvFormatRow),\n/* harmony export */   \"tsvFormatValue\": () => (/* binding */ tsvFormatValue)\n/* harmony export */ });\n/* harmony import */ var _dsv_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dsv.js */ \"./node_modules/d3-dsv/src/dsv.js\");\n\n\nvar tsv = (0,_dsv_js__WEBPACK_IMPORTED_MODULE_0__.default)(\"\\t\");\n\nvar tsvParse = tsv.parse;\nvar tsvParseRows = tsv.parseRows;\nvar tsvFormat = tsv.format;\nvar tsvFormatBody = tsv.formatBody;\nvar tsvFormatRows = tsv.formatRows;\nvar tsvFormatRow = tsv.formatRow;\nvar tsvFormatValue = tsv.formatValue;\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-dsv/src/tsv.js?");
+
+/***/ }),
+
 /***/ "./node_modules/d3-ease/src/cubic.js":
 /*!*******************************************!*\
   !*** ./node_modules/d3-ease/src/cubic.js ***!
@@ -138,6 +259,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"cubicIn\": () => (/* binding */ cubicIn),\n/* harmony export */   \"cubicOut\": () => (/* binding */ cubicOut),\n/* harmony export */   \"cubicInOut\": () => (/* binding */ cubicInOut)\n/* harmony export */ });\nfunction cubicIn(t) {\n  return t * t * t;\n}\n\nfunction cubicOut(t) {\n  return --t * t * t + 1;\n}\n\nfunction cubicInOut(t) {\n  return ((t *= 2) <= 1 ? t * t * t : (t -= 2) * t * t + 2) / 2;\n}\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-ease/src/cubic.js?");
+
+/***/ }),
+
+/***/ "./node_modules/d3-fetch/src/dsv.js":
+/*!******************************************!*\
+  !*** ./node_modules/d3-fetch/src/dsv.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ dsv),\n/* harmony export */   \"csv\": () => (/* binding */ csv),\n/* harmony export */   \"tsv\": () => (/* binding */ tsv)\n/* harmony export */ });\n/* harmony import */ var d3_dsv__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! d3-dsv */ \"./node_modules/d3-dsv/src/dsv.js\");\n/* harmony import */ var d3_dsv__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! d3-dsv */ \"./node_modules/d3-dsv/src/csv.js\");\n/* harmony import */ var d3_dsv__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! d3-dsv */ \"./node_modules/d3-dsv/src/tsv.js\");\n/* harmony import */ var _text_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text.js */ \"./node_modules/d3-fetch/src/text.js\");\n\n\n\nfunction dsvParse(parse) {\n  return function(input, init, row) {\n    if (arguments.length === 2 && typeof init === \"function\") row = init, init = undefined;\n    return (0,_text_js__WEBPACK_IMPORTED_MODULE_0__.default)(input, init).then(function(response) {\n      return parse(response, row);\n    });\n  };\n}\n\nfunction dsv(delimiter, input, init, row) {\n  if (arguments.length === 3 && typeof init === \"function\") row = init, init = undefined;\n  var format = (0,d3_dsv__WEBPACK_IMPORTED_MODULE_1__.default)(delimiter);\n  return (0,_text_js__WEBPACK_IMPORTED_MODULE_0__.default)(input, init).then(function(response) {\n    return format.parse(response, row);\n  });\n}\n\nvar csv = dsvParse(d3_dsv__WEBPACK_IMPORTED_MODULE_2__.csvParse);\nvar tsv = dsvParse(d3_dsv__WEBPACK_IMPORTED_MODULE_3__.tsvParse);\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-fetch/src/dsv.js?");
+
+/***/ }),
+
+/***/ "./node_modules/d3-fetch/src/text.js":
+/*!*******************************************!*\
+  !*** ./node_modules/d3-fetch/src/text.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction responseText(response) {\n  if (!response.ok) throw new Error(response.status + \" \" + response.statusText);\n  return response.text();\n}\n\n/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(input, init) {\n  return fetch(input, init).then(responseText);\n}\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-fetch/src/text.js?");
 
 /***/ }),
 
@@ -897,6 +1040,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar epsilon2 = 1e-12;\n\nfunction cosh(x) {\n  return ((x = Math.exp(x)) + 1 / x) / 2;\n}\n\nfunction sinh(x) {\n  return ((x = Math.exp(x)) - 1 / x) / 2;\n}\n\nfunction tanh(x) {\n  return ((x = Math.exp(2 * x)) - 1) / (x + 1);\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((function zoomRho(rho, rho2, rho4) {\n\n  // p0 = [ux0, uy0, w0]\n  // p1 = [ux1, uy1, w1]\n  function zoom(p0, p1) {\n    var ux0 = p0[0], uy0 = p0[1], w0 = p0[2],\n        ux1 = p1[0], uy1 = p1[1], w1 = p1[2],\n        dx = ux1 - ux0,\n        dy = uy1 - uy0,\n        d2 = dx * dx + dy * dy,\n        i,\n        S;\n\n    // Special case for u0 ≅ u1.\n    if (d2 < epsilon2) {\n      S = Math.log(w1 / w0) / rho;\n      i = function(t) {\n        return [\n          ux0 + t * dx,\n          uy0 + t * dy,\n          w0 * Math.exp(rho * t * S)\n        ];\n      }\n    }\n\n    // General case.\n    else {\n      var d1 = Math.sqrt(d2),\n          b0 = (w1 * w1 - w0 * w0 + rho4 * d2) / (2 * w0 * rho2 * d1),\n          b1 = (w1 * w1 - w0 * w0 - rho4 * d2) / (2 * w1 * rho2 * d1),\n          r0 = Math.log(Math.sqrt(b0 * b0 + 1) - b0),\n          r1 = Math.log(Math.sqrt(b1 * b1 + 1) - b1);\n      S = (r1 - r0) / rho;\n      i = function(t) {\n        var s = t * S,\n            coshr0 = cosh(r0),\n            u = w0 / (rho2 * d1) * (coshr0 * tanh(rho * s + r0) - sinh(r0));\n        return [\n          ux0 + u * dx,\n          uy0 + u * dy,\n          w0 * coshr0 / cosh(rho * s + r0)\n        ];\n      }\n    }\n\n    i.duration = S * 1000 * rho / Math.SQRT2;\n\n    return i;\n  }\n\n  zoom.rho = function(_) {\n    var _1 = Math.max(1e-3, +_), _2 = _1 * _1, _4 = _2 * _2;\n    return zoomRho(_1, _2, _4);\n  };\n\n  return zoom;\n})(Math.SQRT2, 2, 4));\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-interpolate/src/zoom.js?");
+
+/***/ }),
+
+/***/ "./node_modules/d3-scale/src/init.js":
+/*!*******************************************!*\
+  !*** ./node_modules/d3-scale/src/init.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"initRange\": () => (/* binding */ initRange),\n/* harmony export */   \"initInterpolator\": () => (/* binding */ initInterpolator)\n/* harmony export */ });\nfunction initRange(domain, range) {\n  switch (arguments.length) {\n    case 0: break;\n    case 1: this.range(domain); break;\n    default: this.range(range).domain(domain); break;\n  }\n  return this;\n}\n\nfunction initInterpolator(domain, interpolator) {\n  switch (arguments.length) {\n    case 0: break;\n    case 1: {\n      if (typeof domain === \"function\") this.interpolator(domain);\n      else this.range(domain);\n      break;\n    }\n    default: {\n      this.domain(domain);\n      if (typeof interpolator === \"function\") this.interpolator(interpolator);\n      else this.range(interpolator);\n      break;\n    }\n  }\n  return this;\n}\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-scale/src/init.js?");
+
+/***/ }),
+
+/***/ "./node_modules/d3-scale/src/quantile.js":
+/*!***********************************************!*\
+  !*** ./node_modules/d3-scale/src/quantile.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ quantile)\n/* harmony export */ });\n/* harmony import */ var d3_array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3-array */ \"./node_modules/d3-array/src/quantile.js\");\n/* harmony import */ var d3_array__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! d3-array */ \"./node_modules/d3-array/src/bisect.js\");\n/* harmony import */ var d3_array__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! d3-array */ \"./node_modules/d3-array/src/ascending.js\");\n/* harmony import */ var _init_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./init.js */ \"./node_modules/d3-scale/src/init.js\");\n\n\n\nfunction quantile() {\n  var domain = [],\n      range = [],\n      thresholds = [],\n      unknown;\n\n  function rescale() {\n    var i = 0, n = Math.max(1, range.length);\n    thresholds = new Array(n - 1);\n    while (++i < n) thresholds[i - 1] = (0,d3_array__WEBPACK_IMPORTED_MODULE_0__.quantileSorted)(domain, i / n);\n    return scale;\n  }\n\n  function scale(x) {\n    return x == null || isNaN(x = +x) ? unknown : range[(0,d3_array__WEBPACK_IMPORTED_MODULE_1__.default)(thresholds, x)];\n  }\n\n  scale.invertExtent = function(y) {\n    var i = range.indexOf(y);\n    return i < 0 ? [NaN, NaN] : [\n      i > 0 ? thresholds[i - 1] : domain[0],\n      i < thresholds.length ? thresholds[i] : domain[domain.length - 1]\n    ];\n  };\n\n  scale.domain = function(_) {\n    if (!arguments.length) return domain.slice();\n    domain = [];\n    for (let d of _) if (d != null && !isNaN(d = +d)) domain.push(d);\n    domain.sort(d3_array__WEBPACK_IMPORTED_MODULE_2__.default);\n    return rescale();\n  };\n\n  scale.range = function(_) {\n    return arguments.length ? (range = Array.from(_), rescale()) : range.slice();\n  };\n\n  scale.unknown = function(_) {\n    return arguments.length ? (unknown = _, scale) : unknown;\n  };\n\n  scale.quantiles = function() {\n    return thresholds.slice();\n  };\n\n  scale.copy = function() {\n    return quantile()\n        .domain(domain)\n        .range(range)\n        .unknown(unknown);\n  };\n\n  return _init_js__WEBPACK_IMPORTED_MODULE_3__.initRange.apply(scale, arguments);\n}\n\n\n//# sourceURL=webpack://EnvAM/./node_modules/d3-scale/src/quantile.js?");
 
 /***/ }),
 
@@ -1890,6 +2055,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./assets/dataset.csv":
+/*!****************************!*\
+  !*** ./assets/dataset.csv ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"5f9febec32c2e22d6001a35c6f6b651c.csv\");\n\n//# sourceURL=webpack://EnvAM/./assets/dataset.csv?");
+
+/***/ }),
+
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
   !*** ./node_modules/object-assign/index.js ***!
@@ -2302,6 +2478,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -2316,6 +2504,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

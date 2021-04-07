@@ -8,21 +8,37 @@
 }
 
 .base {
-  padding: 0px;
   display: flex;
   align-items: center;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: row;
 }
 
-.base button {
-  margin: 21px;
+.container {
+  width: 500px;
+  height: 450px;
+  margin: 50px;
 }
 
 .map {
+  width: 800px;
+  margin: 50px;
+}
+
+.form {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 540px;
+  height: 20px;
+  padding: 5px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
