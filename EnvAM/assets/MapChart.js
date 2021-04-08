@@ -78,7 +78,7 @@ const MapChart = ({ setTooltipContent, series, year }) => {
                         outline: 'none'
                       },
                       hover: {
-                        fill: "#0079d3",
+                        fill: "#0275d8",
                         outline: 'none'
                       },
                       pressed: {

@@ -5,7 +5,7 @@ html {
 
 body, .navbar {
     margin: 0;
-    background: linear-gradient(270deg, #c9e4ca, #87bba2, #3b6064);
+    background: linear-gradient(270deg, #c9e4ca, #87bba2, #3b6064, #186a78);
     background-size: 600% 600%;
     -webkit-animation: AnimationName 30s ease infinite;
     -moz-animation: AnimationName 30s ease infinite;
@@ -51,5 +51,9 @@ body, .navbar {
 .welcome-container {
     background-color: #F5FFFA;
     padding: 60px;
+}
+
+.nav-link {
+    color: #F5FFFA !important;
 }
 

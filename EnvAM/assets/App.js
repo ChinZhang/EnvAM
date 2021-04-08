@@ -11,32 +11,32 @@ function App() {
     const [year, setYear] = useState("2011")
     return (
         <div class={"container"} className="explore-container">
-        <h4 class={"text-center"}>Explore</h4>
-        <div class={"form-inline justify-content-around"}>
-            <div class={"form-group"}>
-                  <label class={"control-label"}><strong>Select data:</strong></label>
-                  <select class={"form-control"} value={series} onChange={e => setSeries(e.target.value)}>
-                      <option>CO2 emissions (metric tons per capita)</option>
-                      <option>CO2 emissions (kt)</option>
-                      <option>Total greenhouse gas emissions (kt of CO2 equivalent)</option>
-                      <option>Terrestrial and marine protected areas (% of total territorial area)</option>
-                      <option>Access to electricity (% of population)</option>
-                      <option>Energy use (kg of oil equivalent per capita)</option>
-                      <option>GDP per unit of energy use (PPP $ per kg of oil equivalent)</option>
-                      <option>Total natural resources rents (% of GDP)</option>
-                  </select>
+            <h4 className="container-headers text-center">Explore</h4>
+            <div class={"form-inline justify-content-around"}>
+                <div class={"form-group"}>
+                      <label class={"control-label"}><strong>Select data:</strong></label>
+                      <select class={"form-control"} value={series} onChange={e => setSeries(e.target.value)}>
+                          <option>CO2 emissions (metric tons per capita)</option>
+                          <option>CO2 emissions (kt)</option>
+                          <option>Total greenhouse gas emissions (kt of CO2 equivalent)</option>
+                          <option>Terrestrial and marine protected areas (% of total territorial area)</option>
+                          <option>Access to electricity (% of population)</option>
+                          <option>Energy use (kg of oil equivalent per capita)</option>
+                          <option>GDP per unit of energy use (PPP $ per kg of oil equivalent)</option>
+                          <option>Total natural resources rents (% of GDP)</option>
+                      </select>
+                </div>
+                <div class={"form-group"}>
+                    <label><strong>Select year:</strong></label>
+                    <input className={"form-control input-sm"} type="number" value={year}
+                           onChange={e => setYear(e.target.value)}/>
+                </div>
             </div>
-            <div class={"form-group"}>
-                <label><strong>Select year:</strong></label>
-                <input className={"form-control input-sm"} type="number" value={year}
-                       onChange={e => setYear(e.target.value)}/>
+            <div className="map">
+              <MapChart series={series} year={year} setTooltipContent={setContent} />
+              <ReactTooltip>{content}</ReactTooltip>
             </div>
         </div>
-        <div className="map">
-          <MapChart series={series} year={year} setTooltipContent={setContent} />
-          <ReactTooltip>{content}</ReactTooltip>
-        </div>
-    </div>
   );
 }
 
