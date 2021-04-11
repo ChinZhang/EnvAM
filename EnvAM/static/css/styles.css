@@ -57,3 +57,25 @@ body, .navbar {
     color: #F5FFFA !important;
 }
 
+.compare-year-container, .compare-all-years-container {
+  background-color: white !important;
+  margin: 60px;
+  padding: 30px;
+  border-radius:.25rem !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+}
+
+select, input {
+  margin: 10px !important;
+  padding: 0px;
+}
+
+.container-headers {
+  padding-bottom: 20px;
+  margin-bottom: 30px !important;
+  border-bottom: black 2px solid;
+}
+
+#graph > svg {
+    background-size: 1000px 100px;
+}

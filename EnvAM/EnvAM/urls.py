@@ -22,5 +22,6 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
-    path('home/', TemplateView.as_view(template_name='home_page.html'))
+    path('home/', TemplateView.as_view(template_name='home_page.html')),
+    path('graph/', views.test_graph)
 ]
