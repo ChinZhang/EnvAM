@@ -29,49 +29,55 @@
                 </div>
             </div>
 
+        <section id="section1">
             <span id="root"/>
             <script src="{% static 'index-bundle.js' %}"></script>
+        </section>
 
-            <div class="container-bg compare-year-container">
-            <h4 class="container-headers text-center">Compare Per Year</h4>
-            <div class="form-inline justify-content-start">
-                <div class="form-group float-left">
-                      <label class="control-label"><strong>Select data 1:</strong></label>
-                      <select class="form-control" values="series" name="scode1">
-                          {% for name, code in series_data1 %}
-                              <option value="{{ code }}">{{ name }}</option>
-                          {% endfor %}
-                      </select>
+            <div id="section2" class="container-bg compare-year-container">
+            <h4 class="container-headers text-center">Compare Per Country</h4>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-inline justify-content-start">
+                    <div class="form-group float-left">
+                          <label class="control-label"><strong>Select data 1:</strong></label>
+                          <select class="form-control" values="series" name="scode1">
+                              {% for name, code in series_data %}
+                                  <option value="{{ code }}">{{ name }}</option>
+                              {% endfor %}
+                          </select>
+                    </div>
+                    <div class="form-group margin-form">
+                          <label class="control-label"><strong>Select data 2:</strong></label>
+                          <select class="form-control" values="series" name="scode2">
+                              {% for name, code in series_data %}
+                                  <option value="{{ code }}">{{ name }}</option>
+                              {% endfor %}
+                          </select>
+                    </div>
+                    <div class="form-group">
+                          <label class="control-label"><strong>Country:</strong></label>
+                          <select class="form-control" values="series" name="ccode">
+                              {% for name, code in country_data %}
+                                  <option value="{{ code }}">{{ name }}</option>
+                              {% endfor %}
+                          </select>
+                    </div>
+                    <input type="submit" class="btn btn-info" value="Submit">
                 </div>
-                <div class="form-group">
-                      <label class="control-label"><strong>Select data 2:</strong></label>
-                      <select class="form-control" values="series" name="scode2">
-                          {% for name, code in series_data2 %}
-                              <option value="{{ code }}">{{ name }}</option>
-                          {% endfor %}
-                      </select>
-                </div>
-                <div class="form-group">
-                      <label class="control-label"><strong>Country:</strong></label>
-                      <select class="form-control" values="series" name="ccode">
-                          {% for name, code in country_data1 %}
-                              <option value="{{ code }}">{{ name }}</option>
-                          {% endfor %}
-                      </select>
-                </div>
-            </div>
+            </form>
             <div id="graph">
                 {{ graph|safe }}
             </div>
         </div>
 
-            <div class="container-bg compare-all-years-container">
+            <div id="section3" class="container-bg compare-all-years-container">
             <h4 class="container-headers text-center">Compare All Years</h4>
             <div class="form-inline justify-content-start">
                 <div class="form-group float-left">
                       <label class="control-label"><strong>Select data 1:</strong></label>
                       <select class="form-control" values="series" name="scode1">
-                          {% for name, code in series_data3 %}
+                          {% for name, code in series_data %}
                               <option value="{{ code }}">{{ name }}</option>
                           {% endfor %}
                       </select>
@@ -79,7 +85,7 @@
                 <div class="form-group">
                       <label class="control-label"><strong>Select data 2:</strong></label>
                       <select class="form-control" values="series" name="scode2">
-                          {% for name, code in series_data4 %}
+                          {% for name, code in series_data %}
                               <option value="{{ code }}">{{ name }}</option>
                           {% endfor %}
                       </select>
@@ -89,6 +95,5 @@
         </main>
 
     </body>
-
-</body>
+<script src="{% static "/js/scroll.js" %}"></script>
 </html>

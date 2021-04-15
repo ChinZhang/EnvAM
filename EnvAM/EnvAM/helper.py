@@ -169,18 +169,24 @@ def country_data():
     original_data = pd.read_csv(path)
     country_names = original_data['Country_Name'].unique()
     country_codes = original_data['Country Code'].unique()
-    country_data = zip(country_names, country_codes)
+    country_data_zipped = zip(country_names, country_codes)
+    country_data_dict = {}
+    for name, code in country_data_zipped:
+        country_data_dict[name] = code
 
-    return country_data
+    return country_data_dict
 
 
 def series_data():
     original_data = pd.read_csv(path)
     series_names = original_data['Series_Name'].unique()
     series_codes = original_data['Series Code'].unique()
-    series_data = zip(series_names, series_codes)
+    series_data_zipped = zip(series_names, series_codes)
+    series_data_dict = {}
+    for name, code in series_data_zipped:
+        series_data_dict[name] = code
 
-    return series_data
+    return series_data_dict
 
 # # Test Case of 1 Year Correlation Score
 # find_correlation_1_year(data, '2015', 'GDPPUE', 'CO2PC')
