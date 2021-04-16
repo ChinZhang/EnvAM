@@ -154,8 +154,8 @@ def return_graph(df):
     figure = plt.figure()
     outlier_detect(df)
     sns.regplot(x=x, y=y)
-    plt.xlabel(df.keys()[0])
-    plt.ylabel(df.keys()[1])
+    plt.xlabel(df.keys()[0][1])
+    plt.ylabel(df.keys()[1][1])
 
     imgdata = StringIO()
     figure.savefig(imgdata, format='svg')
@@ -172,7 +172,7 @@ def country_data():
     country_data_zipped = zip(country_names, country_codes)
     country_data_dict = {}
     for name, code in country_data_zipped:
-        country_data_dict[name] = code
+        country_data_dict[code] = name
 
     return country_data_dict
 
@@ -184,7 +184,7 @@ def series_data():
     series_data_zipped = zip(series_names, series_codes)
     series_data_dict = {}
     for name, code in series_data_zipped:
-        series_data_dict[name] = code
+        series_data_dict[code] = name
 
     return series_data_dict
 
