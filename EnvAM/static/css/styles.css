@@ -58,7 +58,7 @@ body, .navbar {
     color: #F5FFFA !important;
 }
 
-.compare-year-container, .compare-all-years-container {
+.compare-year-container, .compare-all-years-container, .get-correlations-container {
   background-color: white !important;
   margin: 60px;
   padding: 30px;
@@ -77,10 +77,22 @@ select, input {
   border-bottom: black 2px solid;
 }
 
-#graph > svg {
-    background-size: 1000px 100px;
-}
-
 .margin-form {
     margin-right: 20px !important;
 }
+
+.graph-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid lightgray;
+    border-radius:.25rem !important;
+    min-height: 400px;
+}
+
+.graph-properties {
+    margin-top: 20px;
+}
+
+
+

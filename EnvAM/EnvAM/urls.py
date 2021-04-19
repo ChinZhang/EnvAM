@@ -22,6 +22,8 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
-    path('home/', TemplateView.as_view(template_name='home_page.html')),
-    path('graph/', views.test_graph)
+    path('compare-per-country/', views.compare_per_country_graph),
+    path('correlation-range/', views.correlation_range),
+    path('compare-years-graph/', views.compare_years_graph),
+
 ]

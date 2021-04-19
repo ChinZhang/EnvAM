@@ -29,75 +29,212 @@
                 </div>
             </div>
 
-        <section id="section1">
-            <span id="root"/>
-            <script src="{% static 'index-bundle.js' %}"></script>
-        </section>
+            <section id="section1">
+                <span id="root"/>
+                <script src="{% static 'index-bundle.js' %}"></script>
+            </section>
 
             <div id="section2" class="container-bg compare-year-container">
-            <h4 class="container-headers text-center">Compare Per Country</h4>
-            <form action="/graph/" method="POST">
-                {% csrf_token %}
-                <div class="form-inline justify-content-start">
-                    <div class="form-group float-left">
-                          <label class="control-label"><strong>Select data 1:</strong></label>
-                          <select class="form-control" values="series" name="scode1">
-                              {% for code, name in series_data %}
-                                  <option value="{{ code }}">{{ name }}</option>
-                              {% endfor %}
-                          </select>
+                <h4 class="container-headers text-center">Compare Per Country</h4>
+                <form action="/compare-per-country/" method="POST" onsubmit="return checkForm(this);">
+                    {% csrf_token %}
+                    <div class="form-inline justify-content-start">
+                        <div class="form-group float-left">
+                              <label class="control-label"><strong>Select data 1:</strong></label>
+                              <select class="form-control" values="series" id="select1" name="scode1" required>
+                                <option disabled selected>Select Variable</option>
+                                  {% for code, name in series_data %}
+                                      <option value="{{ code }}">{{ name }}</option>
+                                  {% endfor %}
+                              </select>
+                        </div>
+                        <div class="form-group margin-form">
+                              <label class="control-label"><strong>Select data 2:</strong></label>
+                              <select class="form-control" values="series" id="select2" name="scode2" required>
+                                <option disabled selected>Select Variable</option>
+                                  {% for code, name in series_data %}
+                                      <option value="{{ code }}">{{ name }}</option>
+                                  {% endfor %}
+                              </select>
+                        </div>
+                        <div class="form-group">
+                              <label class="control-label"><strong>Country:</strong></label>
+                              <select class="form-control" values="series" name="ccode">
+                                  {% for code, name in country_data %}
+                                      <option value="{{ code }}">{{ name }}</option>
+                                  {% endfor %}
+                              </select>
+                        </div>
+                        <input type="submit" class="btn btn-info" value="Submit">
                     </div>
-                    <div class="form-group margin-form">
-                          <label class="control-label"><strong>Select data 2:</strong></label>
-                          <select class="form-control" values="series" name="scode2">
-                              {% for code, name in series_data %}
-                                  <option value="{{ code }}">{{ name }}</option>
-                              {% endfor %}
-                          </select>
+                </form>
+                <div class="graph-container">
+                    <h5 class="card-header">
+                        <button class="toggle-slide" onclick="addressToggle('#insight1')"><i class="fa fa-caret-down"></i></button> Data Insight
+                    </h5>
+                    <div class="card">
+                        <div class="card-body " id="insight1">
+                            <p class="card-text">
+                                <span>1. Some countries may not have data or just one data point and it will return a nan for the r-value.</span><br>
+                                <span>2. Some countries have data but not enough data so keep in mind that the less data there is, the more inaccurate the r-value will be.</span><br>
+                                <span>3. Keep in mind that the r-value ranges are between -1 and +1.</span><br>
+                                <span>4. The closer the r-value is to -1 or +1, the higher the correlation.</span><br>
+                                <span>5. The two CO2 emissions variables are measuring the same thing but with different units so it would show a high correlation.</span><br>
+                                <span>6. The World country variable is an average of the available data for each environmental variable from around the world.</span>
+                            </p>
+                        </div>
                     </div>
-                    <div class="form-group">
-                          <label class="control-label"><strong>Country:</strong></label>
-                          <select class="form-control" values="series" name="ccode">
-                              {% for code, name in country_data %}
-                                  <option value="{{ code }}">{{ name }}</option>
-                              {% endfor %}
-                          </select>
-                    </div>
-                    <input type="submit" class="btn btn-info" value="Submit">
+                    <section class="text-center graph-properties">
+                        <h5>{{ country_name }}</h5>
+                        <span>{{ series_name1 }}</span><br>
+                        <span>{{ series_name2 }}</span><br>
+                        <span id="r_value">{{ r_value }}</span>
+                    </section>
+                    <section class="text-center" id="graph">
+                        {{ compare_per_country_graph|safe }}
+                    </section>
                 </div>
-            </form>
-            <div id="graph">
-                <h3>{{ country_name }}</h3>
-                <h3>{{ series_name1 }}</h3>
-                <h3>{{ series_name2 }}</h3>
-                <h3 id="r_value">{{ r_value }}</h3>
-                {{ graph|safe }}
             </div>
-        </div>
 
-            <div id="section3" class="container-bg compare-all-years-container">
-            <h4 class="container-headers text-center">Compare All Years</h4>
-            <div class="form-inline justify-content-start">
-                <div class="form-group float-left">
-                      <label class="control-label"><strong>Select data 1:</strong></label>
-                      <select class="form-control" values="series" name="scode1">
-                          {% for code, name in series_data %}
-                              <option value="{{ code }}">{{ name }}</option>
-                          {% endfor %}
-                      </select>
-                </div>
-                <div class="form-group">
-                      <label class="control-label"><strong>Select data 2:</strong></label>
-                      <select class="form-control" values="series" name="scode2">
-                          {% for code, name in series_data %}
-                              <option value="{{ code }}">{{ name }}</option>
-                          {% endfor %}
-                      </select>
+            <div id="section3" class="container-bg get-correlations-container">
+                <h4 class="container-headers text-center">Get Correlations for Certain Range</h4>
+                <form action="/correlation-range/" method="POST" onsubmit="return checkForm(this);">
+                    {% csrf_token %}
+                    <div class="form-inline justify-content-start">
+                        <div class="form-group float-left">
+                              <label class="control-label"><strong>Select data 1:</strong></label>
+                              <select class="form-control" values="series" id="select1" name="scode1" required>
+                                <option disabled selected>Select Variable</option>
+                                  {% for code, name in series_data %}
+                                      <option value="{{ code }}">{{ name }}</option>
+                                  {% endfor %}
+                              </select>
+                        </div>
+                        <div class="form-group margin-form">
+                              <label class="control-label"><strong>Select data 2:</strong></label>
+                              <select class="form-control" values="series" id="select2" name="scode2" required>
+                                <option disabled selected>Select Variable</option>
+                                  {% for code, name in series_data %}
+                                      <option value="{{ code }}">{{ name }}</option>
+                                  {% endfor %}
+                              </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label"><strong>Select range:</strong></label>
+                            <input class="form-control" name="range" placeholder="r-value between 0 - 1"  pattern="^[$^-0]\d*(\.\d+)?$">
+                        </div>
+                        <input type="submit" class="btn btn-info" value="Submit">
+                    </div>
+                </form>
+                <div class="graph-container">
+                    <h5 class="card-header">
+                        <button class="toggle-slide" onclick="addressToggle('#insight2')"><i class="fa fa-caret-down"></i></button> Data Insight
+                    </h5>
+                    <div class="card">
+                        <div class="card-body" id="insight2">
+                            <p class="card-text">
+                                <span>1. Select a positive r-value coefficient (r-value ranges are between -1 and +1).</span><br>
+                                <span>2. It will choose countries that are greater than the positive of your chosen r-value and lower than the negative of your chosen r-value. </span><br>
+                                <span>3. It will return nothing if the range you chose does not have any countries in that range. </span><br>
+                                <span>4. Keep in mind that the closer the r-value is to -1 or +1, the higher the correlation.</span><br>
+                                <span>5. The two CO2 emissions variables are measuring the same thing but with different units so it would return all the countries.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <section class="text-center graph-properties">
+                        <span>{{ series_name1_range }}</span><br>
+                        <span>{{ series_name2_range }}</span><br>
+                        <span>{{ r_value_range }}</span><br><br>
+                        {% for country, coeff in list_of_correlations %}
+                            <span>(<strong>{{ country }}</strong>: {{ coeff }})</span>
+                        {% endfor %}
+                    </section>
                 </div>
             </div>
-        </div>
+
+            <div id="section4" class="container-bg compare-all-years-container">
+                <h4 class="container-headers text-center">Compare Correlation for All Years</h4>
+                <form action="/compare-years-graph/" method="POST" onsubmit="return checkForm(this);">
+                    {% csrf_token %}
+                    <div class="form-inline justify-content-start">
+                        <div class="form-group float-left">
+                              <label class="control-label"><strong>Select data 1:</strong></label>
+                              <select class="form-control" values="series" id="select1" name="scode1" required>
+                                <option disabled selected>Select Variable</option>
+                                  {% for code, name in series_data %}
+                                      <option value="{{ code }}">{{ name }}</option>
+                                  {% endfor %}
+                              </select>
+                        </div>
+                        <div class="form-group margin-form">
+                              <label class="control-label"><strong>Select data 2:</strong></label>
+                              <select class="form-control" values="series" id="select2" name="scode2" required>
+                                <option disabled selected>Select Variable</option>
+                                  {% for code, name in series_data %}
+                                      <option value="{{ code }}">{{ name }}</option>
+                                  {% endfor %}
+                              </select>
+                        </div>
+                        <input type="submit" class="btn btn-info" value="Submit">
+                    </div>
+                </form>
+                <div class="graph-container">
+                    <h5 class="card-header">
+                        <button class="toggle-slide" onclick="addressToggle('#insight3')"><i class="fa fa-caret-down"></i></button> Data Insight
+                    </h5>
+                    <div class="card">
+                        <div class="card-body" id="insight3">
+                            <p class="card-text">
+                                <span>1. This shows the correlation of variables from all the countries and plotted based on year.</span><br>
+                                <span>2. Some variables may not have enough data and will display a empty graph with no line.</span><br>
+                                <span>3. Keep in mind that the closer the r-value is to -1 or +1, the higher the correlation.</span><br>
+                                <span>4. Most line charts will have a constant or flat line since correlation does not really change over time.</span><br>
+                                <span>5. The two CO2 emissions variables are measuring the same thing but with different units so it would return a flat line.</span>
+
+                            </p>
+                        </div>
+                    </div>
+                    <section class="text-center graph-properties">
+                        <span>{{ series_name1_years }}</span><br>
+                        <span>{{ series_name2_years }}</span><br>
+                    </section>
+                    <section class="text-center" id="graph">
+                        {{ compare_correlation_all_years_graph|safe }}
+                    </section>
+                </div>
+            </div>
+
         </main>
 
     </body>
 <script src="{% static "/js/scroll.js" %}"></script>
+<script>
+    $(document).ready();
+
+    function checkForm(form) {
+        var scode1 = form.scode1.value
+        var scode2 = form.scode2.value
+
+        if(scode1 == scode2) {
+            alert("Error: Data 1 can not be equal to Data 2.");
+            form.scode1.focus();
+            return false;
+        }
+
+        if(scode1 == "Select Variable" || scode2 == "Select Variable") {
+            alert("Error: Select a variable for both Data 1 and Data 2");
+            form.scode1.focus();
+            return false;
+        }
+
+        return true;
+    }
+
+</script>
+
+<script>
+    function addressToggle(dataInsight) {
+        $(dataInsight).slideToggle('slow');
+    }
+</script>
 </html>

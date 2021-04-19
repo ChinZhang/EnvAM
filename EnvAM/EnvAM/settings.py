@@ -80,14 +80,14 @@ WSGI_APPLICATION = 'EnvAM.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'database',
-        'USER': 'django',
-        'PASSWORD': '12345',
-        'HOST': 'localhost',
-        'PORT': '6033',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'database',
+    #     'USER': 'django',
+    #     'PASSWORD': '12345',
+    #     'HOST': 'localhost',
+    #     'PORT': '6033',
+    # }
 }
 
 # Password validation

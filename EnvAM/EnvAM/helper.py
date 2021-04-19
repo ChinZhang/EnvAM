@@ -7,7 +7,7 @@ import seaborn as sns
 from matplotlib import pyplot as plt
 import matplotlib
 
-matplotlib.rcParams["figure.figsize"] = (10, 6)
+matplotlib.rcParams["figure.figsize"] = (8, 4)
 
 # Load DataSet into DataFrame
 path = os.path.dirname(os.path.abspath("DataSet.csv"))
@@ -19,6 +19,19 @@ data = data.drop(['Country_Name', 'Series_Name'], axis='columns')
 
 year_set = ['1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008',
             '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018']
+country_arr = ['ARG','AUS','BRA','CHN','FRA','DEU','IND','IDN','ITA','JPN','KOR','MEX','NLD','RUS','SAU','ESP','CHE',
+               'TUR','GBR','USA','AFG','ALB','DZA','ASM','AND','AGO','ATG','ARM','ABW','AUT','AZE','BHS','BHR','BGD',
+               'BRB','BLR','BEL','BLZ','BEN','BMU','BTN','BOL','BIH','BWA','VGB','BRN','BGR','BFA','BDI','CPV','KHM',
+               'CMR','CAN','CYM','CAF','TCD','CHI','CHL','COL','COM','COD','COG','CRI','CIV','HRV','CUB','CUW','CYP',
+               'CZE','DNK','DJI','DMA','DOM','ECU','EGY','SLV','GNQ','ERI','EST','SWZ','ETH','FRO','FJI','FIN','PYF',
+               'GAB','GMB','GEO','GHA','GIB','GRC','GRL','GRD','GUM','GTM','GIN','GNB','GUY','HTI','HND','HKG','HUN',
+               'ISL','IRN','IRQ','IRL','IMN','ISR','JAM','JOR','KAZ','KEN','KIR','PRK','XKX','KWT','KGZ','LAO','LVA',
+               'LBN','LSO','LBR','LBY','LIE','LTU','LUX','MAC','MDG','MWI','MYS','MDV','MLI','MLT','MHL','MRT','MUS',
+               'FSM','MDA','MCO','MNG','MNE','MAR','MOZ','MMR','NAM','NRU','NPL','NCL','NZL','NIC','NER','NGA','MKD',
+               'MNP','NOR','OMN','PAK','PLW','PAN','PNG','PRY','PER','PHL','POL','PRT','PRI','QAT','ROU','RWA','WSM',
+               'SMR','STP','SEN','SRB','SYC','SLE','SGP','SXM','SVK','SVN','SLB','SOM','ZAF','SSD','LKA','KNA','LCA',
+               'MAF','VCT','SDN','SUR','SWE','SYR','TJK','TZA','THA','TLS','TGO','TON','TTO','TUN','TKM','TCA','TUV',
+               'UGA','UKR','ARE','URY','UZB','VUT','VEN','VNM','VIR','PSE','YEM','ZMB','ZWE','WLD']
 
 
 # Function to Remove Null Values
@@ -93,7 +106,6 @@ def create_scatter_plot(df):
 
     outlier_detect(df)
     sns.regplot(x=x, y=y)
-    # plt.scatter(x, y, color = 'green')
 
     plt.xlabel(df.keys()[0])
     plt.ylabel(df.keys()[1])
@@ -125,12 +137,22 @@ def find_correlation_country_over_years(df, country, scode1, scode2):
 # Function for Correlation Over Time Line Graph
 def plot_corr_all_years(arr, scode1, scode2):
     plt.style.use('seaborn-whitegrid')
+
+    figure = plt.figure()
     plt.plot(year_set, arr)
     plt.title(f'Correlation Over Time for {scode1} & {scode2}')
     plt.xlabel('Year')
     plt.ylabel('Correlation Coefficient')
     plt.ylim([-1, 1])
-    plt.show()
+
+    matplotlib.rcParams["figure.figsize"] = (10, 4)
+
+    imgdata = StringIO()
+    figure.savefig(imgdata, format='svg')
+    imgdata.seek(0)
+
+    data = imgdata.getvalue()
+    return data
 
 
 # Function for Correlation Over Time
@@ -140,13 +162,28 @@ def find_correlation_all_years(df, scode1, scode2):
     for i in range(23):
         df_out = single_year_comp(df, years[i], scode1, scode2)
         corr_arr.append(float(corr_coef(df_out)))
-    plot_corr_all_years(corr_arr, scode1, scode2)
+    data = plot_corr_all_years(corr_arr, scode1, scode2)
+    return data
 
 
-# # All Test Cases For Correlation Over Time With Sufficient Data
-# find_correlation_all_years(data, 'NRPGDP', 'GDPPUE')
+# Function Prints All Correlations Within a Certain Range
+def find_correlation_all_countries(df, scode1, scode2, coef):
+    corr_arr = []
+    country_corr = {}
+    countries = country_arr
+    for i in range(218):
+        df_out = single_country_comp(df, countries[i], scode1, scode2)
+        corr_arr.append(float(corr_coef(df_out)))
+        x = float(corr_coef(df_out))
+        if (x > float(coef)) or (x < -float(coef)):
+            print(countries[i], x)
+            country_corr[countries[i]] = x
+
+    return country_corr
 
 
+
+# Function for returning graph as a SVG for comparing single country
 def return_graph(df):
     x = df[df.columns[0]]
     y = df[df.columns[1]]
@@ -188,8 +225,3 @@ def series_data():
 
     return series_data_dict
 
-# # Test Case of 1 Year Correlation Score
-# find_correlation_1_year(data, '2015', 'GDPPUE', 'CO2PC')
-#
-# # Test Case of a Country
-# find_correlation_country_over_years(data, 'WLD', 'GDPPUE', 'CO2PC')
