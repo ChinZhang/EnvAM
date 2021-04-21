@@ -94,5 +94,16 @@ select, input {
     margin-top: 20px;
 }
 
+.fa-github {
+    color: black;
+    text-decoration: none;
+    padding-right: 15px;
+}
+
+.fa-github:hover {
+    text-decoration: none;
+    color: #FFFAFA;
+}
+
 
 
