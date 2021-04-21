@@ -3,10 +3,22 @@ Choropleth map for worldwide environmental data by country. Once the map is comp
 
 
 Contributions:
+
+
 Chin Zhang: designed frontend, integrated frontend, backend, react, and database into project, functionality for compare per country.
+
+
 Leo Xu: created React map for the explore section.
+
+
 Samuel Jackson: data collection, functionality for correlation over time, and functionality correlation for a certain range. 
+
+
+
 Kent Facey: data collection and created sql database file.
+
+
+
 Connor Cadwell
 
 
