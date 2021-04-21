@@ -5,13 +5,13 @@ Choropleth map for worldwide environmental data by country. Once the map is comp
 Contributions:
 
 
-Chin Zhang: designed frontend, integrated frontend, backend, react, and database into django project, functionality for compare per country.
+Chin Zhang: designed and created frontend, integrated frontend, backend, react, and database into django project, functionality for compare per country.
 
 
 Leo Xu: created React map for the explore section.
 
 
-Samuel Jackson: data collection, functionality for correlation over time, and functionality correlation for a certain range. 
+Samuel Jackson: data collection, functionality for correlation over time, functionality correlation for a certain range and analysis.
 
 
 
