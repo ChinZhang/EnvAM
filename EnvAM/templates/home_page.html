@@ -120,7 +120,7 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label"><strong>Select range:</strong></label>
-                            <input class="form-control" name="range" placeholder="r-value between 0 - 1"  pattern="^[$^-0]\d*(\.\d+)?$">
+                            <input class="form-control" name="range" placeholder="r-value between 0 - 1" pattern="^[$^-0]\d*(\.\d+)?$" required>
                         </div>
                         <input type="submit" class="btn btn-info" value="Submit">
                     </div>
@@ -199,7 +199,7 @@
                     </section>
                 </div>
             </div>
-
+        <span hidden id="scroll_location">{{ scroll_location }}</span>
         </main>
 
     </body>

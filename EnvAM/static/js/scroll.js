@@ -10,4 +10,7 @@ $(document).ready(function(){
         }
     });
 
+    var scrollLocation = document.getElementById("scroll_location").textContent;
+    $("div" + scrollLocation)[0].scrollIntoView();
+
 });

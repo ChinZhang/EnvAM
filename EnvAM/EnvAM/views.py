@@ -16,6 +16,7 @@ def compare_per_country_graph(request):
     sdata = helper.series_data()
     context = {'country_data': cdata.items(),
                'series_data': sdata.items(),
+               'scroll_location': '#section2',
                }
     if request.method == 'POST':
         data_one = request.POST.get("scode1")
@@ -39,6 +40,7 @@ def correlation_range(request):
     sdata = helper.series_data()
     context = {'country_data': cdata.items(),
                'series_data': sdata.items(),
+               'scroll_location': '#section3',
                }
 
     if request.method == 'POST':
@@ -61,6 +63,7 @@ def compare_years_graph(request):
     cdata = helper.country_data()
     context = {'series_data': sdata.items(),
                'country_data': cdata.items(),
+               'scroll_location': '#section4',
                }
 
     if request.method == 'POST':
