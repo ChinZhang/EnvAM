@@ -24,7 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'n@0=ntk9=d*hu80$#$1k-ym%65vpcu00h$*5#l6)p6*y=u*)t1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# Set this variable to True for local environments, but set it to False for production environments
+# When set to True, the staticfiles load for local environments
+# When set to False, the Google App Engine reroutes and loads it through the defined url in app.yaml
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -133,7 +136,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static'
+if DEBUG:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static'),
+    ]
+else:
+    STATIC_ROOT = 'static'
+
 CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ORIGIN_WHITELIST = [
