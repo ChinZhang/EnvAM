@@ -32,7 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    '20210423t155430-dot-our-tract-311619.ue.r.appspot.com/',
+    'our-tract-311619.ue.r.appspot.com/',
     'envam.tech',
     'www.envam.tech'
 ]
