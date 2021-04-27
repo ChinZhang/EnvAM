@@ -27,7 +27,7 @@ SECRET_KEY = 'n@0=ntk9=d*hu80$#$1k-ym%65vpcu00h$*5#l6)p6*y=u*)t1'
 # Set this variable to True for local environments, but set it to False for production environments
 # When set to True, the staticfiles load for local environments
 # When set to False, the Google App Engine reroutes and loads it through the defined url in app.yaml
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
