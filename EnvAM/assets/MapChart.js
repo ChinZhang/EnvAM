@@ -30,7 +30,9 @@ const MapChart = ({ setTooltipContent, series, year }) => {
         scale: 180
       }}
       style={{
-        maxHeight: "600"
+        maxHeight: "600",
+        paddingLeft: '25%',
+        paddingRight: '25%'
       }}
       >
         <ZoomableGroup>
@@ -78,7 +80,7 @@ const MapChart = ({ setTooltipContent, series, year }) => {
                         outline: 'none'
                       },
                       hover: {
-                        fill: "#0275d8",
+                        fill: "#c9e4ca",
                         outline: 'none'
                       },
                       pressed: {
