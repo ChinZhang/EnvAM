@@ -21,20 +21,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'n@0=ntk9=d*hu80$#$1k-ym%65vpcu00h$*5#l6)p6*y=u*)t1'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Set this variable to True for local environments, but set it to False for production environments
 # When set to True, the staticfiles load for local environments
 # When set to False, the Google App Engine reroutes and loads it through the defined url in app.yaml
-DEBUG = True
+DEBUG = bool(os.environ.get("DEBUG", default=0))
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'localhost',
-    'our-tract-311619.ue.r.appspot.com/',
-    'envam.tech',
-    'www.envam.tech'
+    "envam.fly.dev",
+    "127.0.0.1",
+    "0.0.0.0"
 ]
 
 
@@ -146,5 +144,5 @@ else:
 CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ORIGIN_WHITELIST = [
-     'http://localhost:3000'
+     'http://127.0.0.1:3000'
 ]
